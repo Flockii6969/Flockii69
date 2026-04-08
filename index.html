@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florian Feka – Portfolio</title>
+    <meta name="description" content="Portfolio von Florian Feka – Lehrling für Elektronik & Telekommunikationstechnik bei A1 Telekom Austria. Homelab, Netzwerke, Linux, Self-Hosted Services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>FF<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">Über mich</a></li>
+                <li><a href="#homelab" class="nav-link">Homelab</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#timeline" class="nav-link">Werdegang</a></li>
+                <li><a href="#techstack" class="nav-link">Tech-Stack</a></li>
+                <li><a href="#tools" class="nav-link">Tools</a></li>
+                <li><a href="#impressum" class="nav-link">Impressum</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">Elektronik & Telekommunikation</div>
+            <h1 class="hero-title animate-fade-in-up">
+                <span class="hero-greeting">Hallo, ich bin</span>
+                <span class="hero-name">Florian Feka</span>
+                <span class="hero-typing" id="heroTyping"></span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                Lehrling bei <strong>A1 Telekom Austria</strong> · Homelab-Enthusiast · Self-Hosted Infrastructure
+            </p>
+            <div class="hero-cta animate-fade-in-up delay-2">
+                <a href="#about" class="btn btn-primary">Mehr erfahren</a>
+                <a href="#tools" class="btn btn-outline">Network Tools</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="about">
+        <div class="container">
+            <div class="about-intro scroll-reveal">
+                <p class="about-text">
+                    Seit <strong>2020</strong> beschäftige ich mich intensiv mit Netzwerken, Linux und Self-Hosted Services.
+                    Seit <strong>2023</strong> betreibe ich ein vollständig ausgebautes Homelab mit VLAN-Segmentierung,
+                    Reverse Proxy und Monitoring. Mein Ziel: Systeme nicht nur zum Laufen bringen, sondern
+                    <strong>richtig aufbauen</strong> – mit Konzept, Dokumentation und Redundanz.
+                </p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number" data-target="2020" data-is-year="true">2020</div>
+                    <div class="stat-label">IT-Interesse seit</div>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number" data-target="2023" data-is-year="true">2023</div>
+                    <div class="stat-label">Homelab aktiv seit</div>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number" data-target="10" data-suffix="+">0</div>
+                    <div class="stat-label">Self-Hosted Services</div>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number" data-target="99" data-suffix="%">0</div>
+                    <div class="stat-label">Uptime (30 Tage)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Homelab Section -->
+    <section class="homelab-section" id="homelab">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Hardware & Infrastruktur</span>
+                <h2 class="section-title">HOMELAB <span class="text-accent">SETUP</span></h2>
+                <p class="section-desc">Enterprise-Hardware im kleinen Maßstab – vollständig VLAN-segmentiert, überwacht und redundant ausgelegt.</p>
+            </div>
+            <div class="homelab-grid">
+                <div class="homelab-card scroll-reveal" data-parallax="0.03">
+                    <div class="homelab-card-icon">🌐</div>
+                    <h3>Gateway & Firewall</h3>
+                    <p class="homelab-card-hw">UniFi Cloud Gateway Fiber</p>
+                    <p class="homelab-card-desc">Zentrales Gateway mit Routing, Firewall, IDS/IPS, Deep Packet Inspection und vollständigem VLAN-Management.</p>
+                    <span class="homelab-card-badge">IDS/IPS aktiv</span>
+                </div>
+                <div class="homelab-card scroll-reveal" data-parallax="0.05">
+                    <div class="homelab-card-icon">⚡</div>
+                    <h3>10GbE Switching</h3>
+                    <p class="homelab-card-hw">Sodola 10GbE SFP+ Switch</p>
+                    <p class="homelab-card-desc">10-Gigabit-Switch mit SFP+-Uplinks für schnelle Server-to-Server-Verbindungen und Core-Netzwerk.</p>
+                    <span class="homelab-card-badge">10 Gbit/s Core</span>
+                </div>
+                <div class="homelab-card scroll-reveal" data-parallax="0.04">
+                    <div class="homelab-card-icon">🔌</div>
+                    <h3>Switching</h3>
+                    <p class="homelab-card-hw">3× UniFi Flex Mini</p>
+                    <p class="homelab-card-desc">Managed Switches für physische VLAN-Trennung in jeder Infrastrukturzone.</p>
+                    <span class="homelab-card-badge">VLAN-segmentiert</span>
+                </div>
+                <div class="homelab-card scroll-reveal" data-parallax="0.06">
+                    <div class="homelab-card-icon">📡</div>
+                    <h3>Wireless</h3>
+                    <p class="homelab-card-hw">4× UniFi U7 Lite</p>
+                    <p class="homelab-card-desc">WiFi 7 APs mit VLAN-Tagging pro SSID und zentralem Controller-Management.</p>
+                    <span class="homelab-card-badge">WiFi 7</span>
+                </div>
+                <div class="homelab-card scroll-reveal" data-parallax="0.03">
+                    <div class="homelab-card-icon">📞</div>
+                    <h3>WAN / DSL</h3>
+                    <p class="homelab-card-hw">Fritzbox 7530</p>
+                    <p class="homelab-card-desc">DSL-Modem im Bridge-Mode hinter dem UniFi Gateway – kein Doppel-NAT.</p>
+                    <span class="homelab-card-badge">Bridge Mode</span>
+                </div>
+                <div class="homelab-card scroll-reveal" data-parallax="0.05">
+                    <div class="homelab-card-icon">🖥️</div>
+                    <h3>Compute</h3>
+                    <p class="homelab-card-hw">2× Server (Mini PC + Desktop)</p>
+                    <p class="homelab-card-desc">Mini PC als Always-On-Node für Core-Services. Desktop als Compute-Node für VMs und Docker.</p>
+                    <span class="homelab-card-badge">Dual Node</span>
+                </div>
+                <div class="homelab-card scroll-reveal" data-parallax="0.04">
+                    <div class="homelab-card-icon">🔧</div>
+                    <h3>Utility</h3>
+                    <p class="homelab-card-hw">Swiss Army Knife</p>
+                    <p class="homelab-card-desc">Utility-Node für Experimente ohne den Produktiv-Stack zu beeinflussen.</p>
+                    <span class="homelab-card-badge">Sandbox</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Fähigkeiten</span>
+                <h2 class="section-title">WAS ICH <span class="text-accent">KANN</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-number">01</div>
+                    <h3>Networking</h3>
+                    <p>UniFi · VLAN · ACL · Firewall</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-number">02</div>
+                    <h3>Network Security</h3>
+                    <p>IDS/IPS · Zero Trust · ACLs</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-number">03</div>
+                    <h3>Containerisierung</h3>
+                    <p>Docker · Docker Compose · LXC</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-number">04</div>
+                    <h3>Reverse Proxy</h3>
+                    <p>Pangolin · Nginx · TLS/SSL</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-number">05</div>
+                    <h3>Linux Administration</h3>
+                    <p>Debian · Ubuntu · Bash</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-number">06</div>
+                    <h3>Monitoring</h3>
+                    <p>Grafana · Uptime Kuma · Alerts</p>
+                    <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Ausbildung & Werdegang</span>
+                <h2 class="section-title">MEIN <span class="text-accent">WEG</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 →</span>
+                        <h3>Lehrling – Elektronik & Telekommunikationstechnik</h3>
+                        <p class="timeline-org">A1 Telekom Austria</p>
+                        <p>Praxisausbildung bei Österreichs größtem Netzbetreiber. Fokus auf Netzwerktechnik und Enterprise-Standards.</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 – 2024</span>
+                        <h3>Polytechnische Schule (PTS)</h3>
+                        <p class="timeline-org">Hitzendorf</p>
+                        <p>Technische Grundausbildung und Vorbereitung auf die Berufsausbildung.</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 →</span>
+                        <h3>Homelab Aufbau</h3>
+                        <p class="timeline-org">Eigeninitiative</p>
+                        <p>Aufbau eines vollständigen Enterprise-Homelabs mit UniFi, VLAN, Pangolin, Monitoring und redundanter Infrastruktur.</p>
+                    </div>
+                </div>
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 →</span>
+                        <h3>Beginn: IT & Netzwerke</h3>
+                        <p class="timeline-org">Selbststudium</p>
+                        <p>Start der Beschäftigung mit Netzwerken, Linux und IT-Security. Praktisches Lernen durch eigene Projekte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="techstack-section" id="techstack">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Tech-Stack</span>
+                <h2 class="section-title">MEIN <span class="text-accent">ARSENAL</span></h2>
+            </div>
+            <div class="techstack-grid scroll-reveal">
+                <div class="tech-item">UniFi Cloud GW</div>
+                <div class="tech-item">Sodola 10GbE</div>
+                <div class="tech-item">UniFi Flex Mini</div>
+                <div class="tech-item">UniFi U7 Lite</div>
+                <div class="tech-item">VLAN / ACL</div>
+                <div class="tech-item">IDS / IPS</div>
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Docker Compose</div>
+                <div class="tech-item">Pangolin</div>
+                <div class="tech-item">AdGuard Home</div>
+                <div class="tech-item">Uptime Kuma</div>
+                <div class="tech-item">Grafana</div>
+                <div class="tech-item">Debian Linux</div>
+                <div class="tech-item">Ubuntu Server</div>
+                <div class="tech-item">Bash</div>
+                <div class="tech-item">WireGuard VPN</div>
+                <div class="tech-item">Fritzbox 7530</div>
+                <div class="tech-item">Let's Encrypt</div>
+                <div class="tech-item">Git</div>
+                <div class="tech-item">VS Code</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Tools Section -->
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Engineering Tools</span>
+                <h2 class="section-title">NETZWERK <span class="text-accent">TOOLS</span></h2>
+            </div>
+            <div class="tools-grid">
+                <!-- IPv4 Calculator -->
+                <div class="tool-card scroll-reveal">
+                    <div class="tool-header">
+                        <span class="tool-icon">&#xf0ac;</span>
+                        <h3>IPv4 Calculator</h3>
+                    </div>
+                    <div class="tool-body">
+                        <div class="tool-input-group">
+                            <label for="ipInput">IP-Adresse / CIDR</label>
+                            <div class="tool-input-row">
+                                <input type="text" id="ipInput" placeholder="192.168.1.0/24" value="192.168.1.0/24">
+                                <button class="btn btn-primary btn-sm" id="calcBtn">Berechnen</button>
+                            </div>
+                        </div>
+                        <div class="tool-templates">
+                            <label>Vorlage:</label>
+                            <select id="templateSelect">
+                                <option value="">— Vorlage wählen —</option>
+                                <option value="10.0.0.0/8">Class A – 10.0.0.0/8</option>
+                                <option value="172.16.0.0/12">Class B – 172.16.0.0/12</option>
+                                <option value="192.168.0.0/16">Class C – 192.168.0.0/16</option>
+                                <option value="192.168.1.0/24">LAN – 192.168.1.0/24</option>
+                                <option value="192.168.1.0/28">Small – 192.168.1.0/28</option>
+                                <option value="10.10.0.0/16">VLAN – 10.10.0.0/16</option>
+                            </select>
+                        </div>
+                        <div class="calc-results" id="calcResults">
+                            <div class="calc-result-row">
+                                <span class="calc-label">Network</span>
+                                <span class="calc-value" id="resNetwork">–</span>
+                            </div>
+                            <div class="calc-result-row">
+                                <span class="calc-label">Broadcast</span>
+                                <span class="calc-value" id="resBroadcast">–</span>
+                            </div>
+                            <div class="calc-result-row">
+                                <span class="calc-label">Subnet Mask</span>
+                                <span class="calc-value" id="resSubnet">–</span>
+                            </div>
+                            <div class="calc-result-row">
+                                <span class="calc-label">Wildcard</span>
+                                <span class="calc-value" id="resWildcard">–</span>
+                            </div>
+                            <div class="calc-result-row">
+                                <span class="calc-label">First Host</span>
+                                <span class="calc-value" id="resFirstHost">–</span>
+                            </div>
+                            <div class="calc-result-row">
+                                <span class="calc-label">Last Host</span>
+                                <span class="calc-value" id="resLastHost">–</span>
+                            </div>
+                            <div class="calc-result-row">
+                                <span class="calc-label">Usable Hosts</span>
+                                <span class="calc-value" id="resUsable">–</span>
+                            </div>
+                            <div class="calc-result-row">
+                                <span class="calc-label">Class</span>
+                                <span class="calc-value" id="resClass">–</span>
+                            </div>
+                            <div class="calc-result-row">
+                                <span class="calc-label">IP Type</span>
+                                <span class="calc-value" id="resType">–</span>
+                            </div>
+                            <div class="calc-result-row">
+                                <span class="calc-label">Binary Mask</span>
+                                <span class="calc-value calc-value-mono" id="resBinary">–</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Port Database -->
+                <div class="tool-card scroll-reveal">
+                    <div class="tool-header">
+                        <span class="tool-icon">&#xf0e8;</span>
+                        <h3>Port Datenbank</h3>
+                    </div>
+                    <div class="tool-body">
+                        <div class="tool-input-group">
+                            <label for="portSearch">Port oder Service suchen</label>
+                            <input type="text" id="portSearch" placeholder="z.B. 443 oder HTTPS">
+                        </div>
+                        <div class="port-results" id="portResults">
+                            <table class="port-table">
+                                <thead>
+                                    <tr>
+                                        <th>Port</th>
+                                        <th>Protokoll</th>
+                                        <th>Service</th>
+                                        <th>Beschreibung</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="portTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impressum Section -->
+    <section class="impressum-section" id="impressum">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Impressum</span>
+                <h2 class="section-title">RECHT<span class="text-accent">LICHES</span></h2>
+            </div>
+            <div class="impressum-grid scroll-reveal">
+                <div class="impressum-card">
+                    <h3>Angaben gemäß § 5 ECG</h3>
+                    <p><strong>Florian Feka</strong></p>
+                    <p>Österreich</p>
+                    <p>E-Mail: <a href="mailto:office@flockii69.com">office@flockii69.com</a></p>
+                    <p>Website: <a href="https://www.flockii69.com">www.flockii69.com</a></p>
+                </div>
+                <div class="impressum-card">
+                    <h3>Haftungsausschluss</h3>
+                    <p>Die Inhalte wurden mit größtmöglicher Sorgfalt erstellt. Für Richtigkeit und Aktualität kann keine Gewähr übernommen werden.</p>
+                </div>
+                <div class="impressum-card">
+                    <h3>Datenschutz</h3>
+                    <p>Diese Website verwendet keine Tracking-Cookies und erhebt keine Daten automatisch.</p>
+                    <p>Kontakt: <a href="mailto:office@flockii69.com">office@flockii69.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>FF<span class="logo-bracket"> /&gt;</span>
+                </div>
+                <p>&copy; 2024 Florian Feka. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
